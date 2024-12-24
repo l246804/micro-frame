@@ -1,0 +1,58 @@
+{
+  "name": "micro-frame",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "基于@micro-zoe/micro-app的`iframe`模式结合comlink的通信方案实现的高效、轻量级微前端框架。",
+  "author": "leihaohao <https://github.com/l246804>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/l246804/micro-frame"
+  },
+  "bugs": {
+    "url": "https://github.com/l246804/micro-frame/issues"
+  },
+  "keywords": [
+    "web-components",
+    "micro-frontend",
+    "micro-app",
+    "iframe",
+    "comlink"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "check": "biome check --write",
+    "dev": "rslib build --watch",
+    "format": "biome format --write",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "comlink": "^4.4.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.3",
+    "@rslib/core": "^0.1.5",
+    "@types/node": "^22.8.1",
+    "bumpp": "^9.9.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8"
+  }
+}
